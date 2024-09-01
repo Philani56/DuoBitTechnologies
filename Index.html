@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DOUBIT Technologies PTY LTD provides innovative IT solutions for a modern world.">
+    <meta name="keywords" content="IT Solutions, Technology, Innovation, Software, Services">
+    <meta name="author" content="DOUBIT TECHNOLOGIES PTY LTD">
+    <title>DOU BIT TECHNOLOGIES PTY LTD</title>
+    <link rel="icon" href="assets/logo.png" type="image/x-icon">
+    <style>
+
+
+/* About Us Section Styling */
+.about-us {
+    background: linear-gradient(135deg, #1e3c72, #00c6ff, #2a5298, #ffff);
+    color: #333;
+    padding: 60px 0;
+}
+
+.about-us .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us-content {
+    padding: 20px;
+    background: linear-gradient(135deg, #ffff, #1e3c72, #00c6ff, #2a5298);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-content h2 {
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-us-content p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.about-us-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .about-us .row {
+        flex-direction: column;
+    }
+
+    .about-us-image img {
+        width: 100%;
+    }
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0f1624;
+    color: #fff;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* General Styles for Navigation Links */
+
+
+/* General Styles for Navigation Links */
+/* General Styles for Navigation Links */
+.nav-links {
+    display: none; /* Hide nav links by default */
+    flex-direction: column; /* Stack the nav links vertically */
+    align-items: center;
+    justify-content: flex-start; /* Start from the top, but with some space */
+    position: fixed; /* Fixed position to overlay the entire viewport */
+    top: 10%; /* Move the nav links down from the top */
+    left: 0;
+    width: 100%;
+    height: 90%; /* Ensure the nav links cover most of the screen */
+    background-color: rgba(0, 0, 0, 0.8); /* Add a semi-transparent background for overlay effect */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-100%); /* Move out of view */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding: 20px 0; /* Add some padding to the top and bottom */
+    z-index: 1000; /* Ensure it overlays other content */
+}
+
+/* Show the nav links when the active class is added */
+.nav-links.active {
+    display: flex; /* Display flex when active */
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* No vertical offset, fully visible */
+}
+
+/* Style the individual nav link items */
+.nav-links li {
+    margin: 10px 0; /* Add space between each nav link */
+}
+
+/* Style the nav link text */
+.nav-links a {
+    font-size: 1rem; /* Smaller text size */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add padding around the links */
+    border-radius: 5px; /* Slightly round the corners */
+    
+}
+
+
+/* Navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #00c6ff, #2a5298, #ffff); /* Gradient background with blue/purple touch */
+    padding: 10px 30px; /* Reduced padding for a smaller navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    overflow: hidden; /* Ensure no content overflows */
+    box-sizing: border-box; /* Ensure padding is included in width calculations */
+}
+
+/* Logo */
+.navbar .logo img {
+    height: 60px; /* Adjusted the logo size */
+    width: auto;
+}
+
+/* Navbar links */
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center the items */
+    flex: 1; /* Allow the list to grow and shrink */
+    padding-left: 0; /* Ensure there is no padding on the left side */
+    margin-right: auto; /* Ensure the menu aligns to the left by default */
+}
+
+.navbar ul li {
+    margin: 0; /* Remove margin to prevent items from being pushed out */
+}
+
+.navbar ul li a {
+    color: #fff; /* White color for the links */
+    text-decoration: none;
+    padding: 10px 15px; /* Adjusted padding */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #004080;
+    box-shadow: 0 4px 8px rgba(0, 191, 255, 0.5);
+}
+
+/* Responsive menu button (hamburger) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 11; /* Ensure it stays above the menu */
+    margin-left: auto; /* Align the menu icon to the right */
+}
+
+.menu-icon span {
+    background-color: #fff; /* White color for the hamburger menu */
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(135deg, #1e3c72, #2a5298); /* Gradient background in mobile view */
+        padding: 20px 0; /* Increased padding for more space */
+        margin: 0; /* Reset margin */
+        gap: 10px; /* Add some space between links */
+        position: absolute;
+        top: 70px; /* Align the dropdown below the navbar */
+        left: 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for dropdown effect */
+        z-index: 9999; /* Ensure the dropdown is on top */
+        height: auto; /* Let the height adjust based on content */
+        max-height: calc(100vh - 70px); /* Prevent it from exceeding the viewport height */
+        overflow-y: auto; /* Add vertical scroll if content exceeds the viewport */
+        box-sizing: border-box; /* Include padding in width/height */
+    }
+
+    .navbar ul li {
+        padding: 15px 20px; /* Increase padding for larger click areas */
+        text-align: center; /* Center align text */
+        font-size: 18px; /* Increase font size for readability */
+    }
+
+    .navbar ul li a {
+        color: #fff; /* White text color */
+        text-decoration: none; /* Remove underlines */
+    }
+
+    .navbar ul li a:hover {
+        color: #ff5722; /* Accent color on hover */
+    }
+
+
+    .menu-icon {
+        display: flex;
+    }
+
+    .navbar ul.active {
+        display: flex; /* Show the dropdown when active */
+    }
+
+    /* Animation for mobile dropdown */
+    .navbar ul {
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    .navbar ul.active {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Home Section with Video Background */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.home video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    min-width: 100%; /* Ensures the video covers the entire width */
+    min-height: 100%; /* Ensures the video covers the entire height */
+}
+
+.home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 22, 36, 0.8); /* Dark overlay for better text contrast */
+    z-index: 2;
+}
+
+.home .content {
+    position: relative;
+    z-index: 3;
+    color: #fff;
+}
+
+.home .content h1 {
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.home .content p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Advanced Button Styling */
+.home .content .cta-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff, #0059b2); /* Complex gradient blend of different blues */
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem; /* Slightly larger text for better visibility */
+    font-weight: bold;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow for a 3D effect */
+    transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    display: inline-block;
+    border: 2px solid transparent; /* Transparent border for hover effect */
+}
+
+.home .content .cta-button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff, #0059b2); /* Reversed gradient on hover */
+    transform: translateY(-4px); /* Slight lift effect */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+    border: 2px solid #fff; /* White border on hover for better contrast */
+}
+
+.home .content .cta-button:active {
+    transform: translateY(1px); /* Slightly depressed effect when clicked */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Reset shadow on click */
+    border: 2px solid transparent; /* Reset border on click */
+}
+
+/* Responsive styling */
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .home video {
+        object-fit: cover; /* Keep the video covering the area */
+        min-width: auto;
+        min-height: auto;
+        width: 100vw; /* Ensure video covers full viewport width */
+        height: 100vh; /* Ensure video covers full viewport height */
+        z-index: -1; /* Ensure video is behind other elements */
+    }
+
+    .home .content {
+        z-index: 1; /* Ensure content is above the video */
+        position: relative; /* Ensure correct positioning */
+    }
+
+    .home .content h1 {
+        font-size: 2rem; /* Reduce heading size on smaller screens */
+    }
+
+    .home .content p {
+        font-size: 1rem; /* Reduce paragraph size on smaller screens */
+    }
+
+    .home .content .cta-button {
+        font-size: 1rem; /* Adjust button font size for smaller screens */
+        padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+
+
+/* Services Section */
+.services {
+    background: linear-gradient(135deg, #ffffff, #1e3c72, #00bcd4, #ffffff);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Service Card Styling */
+.services .card {
+    background: #fff;
+    color: #1e90ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: calc(25% - 20px); /* Four cards per row on desktops */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Bounce effect on hover */
+.services .card:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* Icon Styling */
+.services .card .icon {
+    background-color: #1e90ff;
+    border-radius: 50%;
+    padding: 15px;
+    display: inline-block;
+}
+
+.services .card .icon img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    filter: brightness(0) invert(1); /* Make icon white */
+}
+
+/* Text Styling */
+.services .card h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.services .card p {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #333;
+}
+
+/* Button Styling */
+.services .card .more-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.services .card .more-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .services .card {
+        width: calc(50% - 20px); /* Two cards per row on tablets */
+    }
+
+    .services .card h2 {
+        font-size: 1.3rem;
+    }
+
+    .services .card p {
+        font-size: 1rem;
+    }
+
+    .services .card .more-button {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .services .card {
+        width: 100%; /* Full-width cards on mobile */
+        margin-bottom: 20px;
+    }
+
+    .services .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .services .card p {
+        font-size: 0.9rem;
+    }
+
+    .services .card .more-button {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+
+
+/* Development Scope Section */
+.development-scope {
+    background: linear-gradient(135deg, #ffffff, #ffffff, #ffffff);
+    padding: 60px 20px;
+    color: #1e3c72;
+}
+
+.development-scope .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.development-scope .scope-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.development-scope .scope-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.development-scope .scope-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1e3c72;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.development-scope .scope-text ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.development-scope .scope-text ul li {
+    position: relative;
+    padding-left: 30px;
+    margin: 15px 0;
+    color: #1e3c72;
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.development-scope .scope-text ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.5rem;
+    color: #1e3c72;
+}
+
+.development-scope .scope-image {
+    flex: 1;
+    max-width: 500px;
+    animation: moveAround 10s infinite alternate ease-in-out;
+}
+
+.development-scope .scope-image img {
+    width: 100%;
+    height: auto;
+    border: none;
+    box-shadow: none;
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(-10px) translateX(10px);
+    }
+    100% {
+        transform: translateY(0) translateX(0);
+    }
+}
+
+/* Learn More Button */
+.learn-more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: linear-gradient(135deg, #1e90ff, #00bcd4);
+    border-radius: 5px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.learn-more-button:hover {
+    background: linear-gradient(135deg, #00bcd4, #1e90ff);
+    transform: scale(1.05);
+}
+
+/* Responsive Styling for Development Scope Section */
+@media (max-width: 768px) {
+    .development-scope .scope-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .development-scope .scope-text,
+    .development-scope .scope-image {
+        max-width: 100%;
+    }
+
+    .development-scope .scope-text h2 {
+        font-size: 2rem;
+    }
+
+    .development-scope .scope-text ul {
+        font-size: 1rem;
+    }
+}
+
+/* Development Features Section */
+.development-features {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.development-features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.feature-item {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: calc(33.333% - 20px);
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+}
+
+.feature-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    background: linear-gradient(135deg, #1e3c72, #00c6ff);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.feature-text {
+    z-index: 2;
+    margin-bottom: 8px;
+}
+
+.feature-image p {
+    z-index: 2;
+    font-size: 0.9rem;
+    font-weight: normal;
+    text-transform: none;
+    margin: 0;
+    margin-top: 8px;
+}
+
+.feature-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    transition: transform 0.3s ease-in-out;
+}
+
+.feature-item:hover .feature-image::before {
+    transform: scale(1.1);
+    opacity: 0.5;
+}
+
+.feature-image-1::before { background-image: url('assets/feature0.jpg'); }
+.feature-image-2::before { background-image: url('assets/feature1.jpg'); }
+.feature-image-3::before { background-image: url('assets/feature2.jpg'); }
+.feature-image-4::before { background-image: url('assets/feature3.jpg'); }
+.feature-image-5::before { background-image: url('assets/feature4.jpg'); }
+.feature-image-6::before { background-image: url('assets/feature5.jpg'); }
+
+/* Responsive Styling for Development Features Section */
+@media (max-width: 768px) {
+    .feature-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+
+    .feature-image {
+        height: 180px;
+    }
+
+    .feature-text {
+        font-size: 1rem;
+    }
+
+    .feature-image p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .feature-image {
+        height: 150px;
+    }
+
+    .feature-text {
+        font-size: 0.9rem;
+    }
+
+    .feature-image p {
+        font-size: 0.7rem;
+    }
+}
+
+/* IT Support Section */
+.it-support-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, rgba(106, 125, 221, 0.7), rgba(190, 164, 155, 0.7)),
+                url('assets/background.jpg') center/cover no-repeat;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.it-support-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.it-support-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.it-support-section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 2px;
+}
+
+.it-support-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Animation for Text Appearance */
+.it-support-section h2,
+.it-support-section p {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Quote Button */
+.quote-button {
+    display: inline-block;
+    padding: 15px 30px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border: 2px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.quote-button:hover {
+    background-color: white;
+    color: #000;
+}
+
+/* Responsive Styling for IT Support Section */
+@media (max-width: 768px) {
+    .it-support-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .it-support-section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .it-support-section h2 {
+        font-size: 2rem;
+    }
+
+    .it-support-section p {
+        font-size: 0.9rem;
+    }
+
+    .quote-button {
+        padding: 10px 20px;
+    }
+}
+
+
+
+
+    /* System Aid */
+    .system-aid-section {
+    padding: 100px 20px;
+    background-color: #f0f4f8;
+}
+
+.system-aid-section .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Enable wrapping for smaller screens */
+}
+
+.card-left, .card-right {
+    flex: 1;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Space between cards on small screens */
+}
+
+.card-left {
+    background: linear-gradient(135deg, #00c6ff, #1e3c72);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center; /* Center align for better mobile layout */
+}
+
+.card-left h2 {
+    color: white;
+    font-size: 1.8em;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-left p {
+    color: white;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.additional-info {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.info-item {
+    flex: 1;
+    margin-bottom: 20px; /* Space out items on smaller screens */
+}
+
+.info-item h1 {
+    color: white;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    color: white;
+    font-size: 1.2em;
+}
+
+.card-right img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.card-left:hover, .card-right:hover {
+    transform: translateY(-10px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .system-aid-section .container {
+        flex-direction: column;
+    }
+
+    .card-left, .card-right {
+        margin-bottom: 30px;
+    }
+
+    .card-left h2 {
+        font-size: 1.5em;
+    }
+
+    .card-left p {
+        font-size: 1.1em;
+    }
+
+    .info-item h1 {
+        font-size: 1.5em;
+    }
+
+    .info-item p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .system-aid-section {
+        padding: 60px 15px;
+    }
+
+    .card-left {
+        padding: 30px;
+    }
+
+    .card-left h2 {
+        font-size: 1.4em;
+    }
+
+    .card-left p {
+        font-size: 1em;
+    }
+
+    .info-item h1 {
+        font-size: 1.3em;
+    }
+
+    .info-item p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* IT Support */
+
+.it-support-section {
+    padding: 80px 20px;
+    background: linear-gradient(rgba(30, 60, 114, 0.7), rgba(0, 198, 255, 0.7)), 
+                url('assets/background2.jpg') center/cover no-repeat;
+    text-align: center;
+}
+
+.it-support-section h1 {
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.it-support-section .cards {
+    display: flex;
+    justify-content: center; /* Center cards horizontally */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between cards */
+}
+
+.it-support-section .card {
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensure padding and borders are included in width/height */
+}
+
+.it-support-section .card h2 {
+    font-size: 1.5em;
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.it-support-section .card p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.it-support-section .card hr {
+    border: 0;
+    height: 1px;
+    background: #1e3c72;
+    margin: 10px 0;
+}
+
+.it-support-section .card .industry-solutions {
+    font-size: 1.1em;
+    color: #1e3c72;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .it-support-section {
+        padding: 60px 15px;
+    }
+
+    .it-support-section h1 {
+        font-size: 2em; /* Smaller h1 for tablets */
+        margin-bottom: 40px;
+    }
+
+    .it-support-section .card {
+        padding: 20px;
+        min-width: 220px;
+        max-width: 100%; /* Cards will take up full width on smaller screens */
+    }
+
+    .it-support-section .card h2 {
+        font-size: 1.3em;
+    }
+
+    .it-support-section .card p {
+        font-size: 0.9em;
+    }
+
+    .it-support-section .card .industry-solutions {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .it-support-section h1 {
+        font-size: 1.8em; /* Smaller h1 for mobile */
+    }
+
+    .it-support-section .card {
+        padding: 15px;
+        margin-bottom: 20px;
+        min-width: 100%; /* Full width cards on mobile */
+        max-width: 100%; /* Ensure cards do not exceed container width */
+    }
+
+    .it-support-section .card h2 {
+        font-size: 1.2em;
+    }
+
+    .it-support-section .card p {
+        font-size: 0.85em;
+    }
+
+    .it-support-section .card .industry-solutions {
+        font-size: 0.95em;
+    }
+}
+
+
+
+/* Images - Reality development */
+
+.reality-development-section {
+    padding: 80px 0;
+    background-color: #f0f4f8; /* Light background color for contrast */
+    text-align: center;
+}
+
+.reality-development-section h1 {
+    font-size: 2.5em;
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; /* Space between images */
+}
+
+.image-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.image-item:hover img {
+    transform: scale(1.1);
+}
+
+.image-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.5), rgba(0, 198, 255, 0.5));
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.image-item:hover::after {
+    opacity: 0.5;
+}
+
+.reality-development-section .description {
+    font-size: 1em; /* Reduced font size for smaller text */
+    color: black;
+    max-width: 800px;
+    margin: 0 auto 40px; /* Center and add spacing below the paragraph */
+    line-height: 1.6;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .reality-development-section h1 {
+        font-size: 1.5em;
+    }
+}
+
+
+
+
+/* Application AID */
+
+.application-aid-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5; /* Light background for contrast */
+    text-align: center;
+}
+
+.application-aid-section h1 {
+    font-size: 2em; /* Slightly smaller on mobile */
+    color: #1e3c72;
+    margin-bottom: 20px;
+}
+
+.application-aid-section .description {
+    font-size: 1em;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+}
+
+.application-aid-section .image-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center images on mobile */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.application-aid-section .image-item {
+    position: relative;
+    flex: 1 1 30%; /* Three items per row on desktop, adjusts on mobile */
+    min-width: 280px; /* Ensures minimum width on smaller screens */
+    max-width: 350px; /* Limits maximum width */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.5), rgba(0, 198, 255, 0.5)); /* Gradient overlay */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.application-aid-section .image-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    opacity: 0.8; /* Slight transparency to enhance text visibility */
+    transition: opacity 0.3s ease;
+}
+
+.application-aid-section .image-item:hover img {
+    opacity: 1;
+}
+
+.application-aid-section .image-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.application-aid-section .image-item h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .application-aid-section h1 {
+        font-size: 1.8em;
+    }
+
+    .application-aid-section .description {
+        font-size: 0.9em;
+    }
+
+    .application-aid-section .image-item {
+        flex: 1 1 45%; /* Two items per row on tablets */
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .application-aid-section h1 {
+        font-size: 1.5em;
+    }
+
+    .application-aid-section .description {
+        font-size: 0.85em;
+    }
+
+    .application-aid-section .image-item {
+        flex: 1 1 100%; /* One item per row on mobile */
+        min-width: 100%;
+    }
+
+    .application-aid-section .image-item h3 {
+        font-size: 1em;
+    }
+}
+
+/* Contact Us Section */
+.contact-us-section {
+    padding: 100px 20px;
+    background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(0, 198, 255, 0.7)), 
+                url('assets/co.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box; /* Include padding and borders in the element's width and height */
+    overflow: hidden; /* Prevent horizontal scrolling */
+}
+
+.contact-us-section h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-us-section p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box; /* Ensure the form fits within the viewport */
+}
+
+.contact-form .form-group {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+}
+
+.contact-form .form-group input,
+.contact-form .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    font-size: 1em;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contact-form .form-group input:focus,
+.contact-form .form-group textarea:focus {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.3);
+    outline: none;
+}
+
+.contact-form .submit-button {
+    padding: 12px 25px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff, #1e3c72);
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form .submit-button:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff, #1e3c72);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 191, 255, 0.3);
+}
+
+.contact-form .submit-button:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 8px rgba(0, 191, 255, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-us-section h1 {
+        font-size: 2em;
+    }
+
+    .contact-us-section p {
+        font-size: 1em;
+    }
+
+    .contact-form {
+        padding: 30px;
+        width: 90%;
+    }
+
+    .contact-form .submit-button {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-us-section h1 {
+        font-size: 1.8em;
+    }
+
+    .contact-us-section p {
+        font-size: 0.95em;
+    }
+
+    .contact-form {
+        padding: 20px;
+        width: 100%;
+    }
+
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    .contact-form .submit-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+/* Google Maps Section */
+
+.map-section {
+    padding: 0; /* Remove padding around the map */
+    margin: 0;  /* Remove margin to eliminate any space */
+}
+
+.map-section iframe {
+    width: 100%; /* Ensure the iframe takes up the full width */
+    height: 450px; /* Set a fixed height for the map */
+    border: none; /* Remove the border */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .map-section iframe {
+        height: 350px; /* Adjust height for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .map-section iframe {
+        height: 300px; /* Adjust height for mobile devices */
+    }
+}
+
+/* Footer Section */
+.footer-section {
+    background: linear-gradient(rgba(30, 60, 114, 0.8), rgba(0, 198, 255, 0.8)), 
+                url('assets/201.jpg') center/cover no-repeat;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo img {
+    height: 60px; /* Adjust size of the logo */
+    width: auto;
+    margin-bottom: 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-links, .footer-contact, .footer-social {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: #ffddc1; /* Light color on hover */
+}
+
+.footer-contact p {
+    margin: 10px 0;
+}
+
+.footer-contact a {
+    color: #ffddc1; /* Light color for email links */
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-social .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social .social-icon img {
+    height: 30px; /* Adjust size of social media icons */
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social .social-icon:hover img {
+    opacity: 0.7; /* Slight fade effect on hover */
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    font-size: 0.9em;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links, .footer-contact, .footer-social {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-links ul li {
+        margin-bottom: 8px;
+    }
+
+    .footer-social .social-icon img {
+        height: 25px; /* Adjust size of social media icons for mobile */
+    }
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#home"> <!-- Replace with your target URL -->
+                <img src="assets/logo.png" alt="DOUBIT Logo"> <!-- Replace with your logo -->
+            </a>
+            
+        </div>
+        <!-- Hamburger Icon -->
+<div class="menu-icon" onclick="toggleMenu()">
+    &#9776; <!-- This represents the hamburger icon -->
+</div>
+
+<!-- Navigation Links -->
+<div id="nav-links" class="nav-links">
+    <span><a href="#home">Home</a></span>
+    <span><a href="#about-us1">About Us</a></span>
+    <span><a href="#development-features">Services</a></span>
+    <span><a href="#contact-us-section">Contact</a></span>
+</div>
+        <ul id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-us1">About Us</a></li>
+            <li><a href="#about">Services</a></li>
+            <li><a href="#contact-us-section">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+    <section class="home">
+
+        <video src="assets/global.mp4" autoplay muted loop></video> <!-- Replace with your video -->
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Welcome to DOUBIT Technologies PTY LTD</h1>
+            <p>Innovative IT solutions for a modern world.</p>
+            <a href="#contact-us-section" class="cta-button">Talk to an Expert</a>
+        </div>
+    </section>
+</section>
+
+
+<section id="about-us1" class="about-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="about-us-content">
+                    <h2>About Us</h2>
+                    <p>DUOBIT TECHNOLOGIES PTY LTD is dedicated to simplifying and enhancing system and process management across various industries. We provide comprehensive IT support to ensure our clients receive timely assistance and seamless service. Our expertise spans systems and software development, desktop and mobile application development, as well as website development.
+
+                        At DUOBIT TECHNOLOGIES, we transform your ideas into tangible solutions. We specialize in conceptualizing and realizing your vision, ensuring your complete satisfaction.
+                        
+                        Our Motto: Building Ideas, Developing Reality</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about-us-image">
+                    <img src="assets/logo.png" alt="Our Team"> <!-- Replace with your image -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Services Section -->
+<section id="about">
+<section class="services">
+    
+    <div class="container">
+        <div class="card">
+            <div class="icon">
+                <!-- Replace with your icon for Mobile Development -->
+                <img src="assets/mobile-development-icon.png" alt="Mobile Development Icon">
+            </div>
+            <h2>Mobile Development</h2>
+            <p>With a motto of 'BUILDING IDEAS, DEVELOPING REALITY', we aim to bring satisfaction by transforming your visions into outcomes that make meaningful impact.</p>
+            
+        </div>
+        <div class="card">
+            <div class="icon">
+                <!-- Replace with your icon for Website Support -->
+                <img src="assets/website-support-icon.png" alt="Website Support Icon">
+            </div>
+            <h2>Website Support</h2>
+            <p>Our commitment lies in conceptualizing your ideas and bringing them to life, ensuring each project is crafted with innovation and attention to detail.</p>
+            
+        </div>
+        <div class="card">
+            <div class="icon">
+                <!-- Replace with your icon for Idea Conceptualization -->
+                <img src="assets/idea-conceptualization-icon.png" alt="Idea Conceptualization Icon">
+            </div>
+            <h2>Idea Conceptualization</h2>
+            <p>At DUOBIT TECHNOLOGIES PTY LTD, we are dedicated to realizing your visions. Our innovative approach and commitment ensure projects come to life.</p>
+            
+        </div>
+        <div class="card">
+            <div class="icon">
+                <!-- Replace with your icon for Client Assistance -->
+                <img src="assets/client-assistance-icon.png" alt="Client Assistance Icon">
+            </div>
+            <h2>Client Assistance</h2>
+            <p>We are DOUBIT TECHNOLOGIES PTY LTD, focused on simplifying system management. Our cutting-edge solutions drive growth and innovation, enhancing efficiency.</p>
+            
+        </div>
+    </div>
+</section>
+</section>
+
+<!-- Development Scope Section -->
+<section class="development-scope">
+    <div class="container">
+        <div class="scope-content">
+            <div class="scope-text">
+                <h2>Development Scope</h2>
+                <ul>
+                    <li>Planning and Design</li>
+                    <li>Mock Ups / Wireframes Development</li>
+                    <li>Prototype Development</li>
+                    <li>Integration System</li>
+                    <li>Testing</li>
+                    <li>Deployment</li>
+                </ul>
+               
+            </div>
+            <div class="scope-image">
+                <img src="assets/8.jpg" alt="Development Scope Image"> 
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Development Features Section -->
+<section id="development-features">
+<section class="development-features">
+    <div class="container">
+        <h2>Industry Solutions</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="feature-image feature-image-1">
+                    <span class="feature-text">Systems Development</span>
+                    <p>Leading industry solutions provider</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-image feature-image-2">
+                    <span class="feature-text">Empower Your Business with Our IT Solutions</span>
+                    <p>Specialized in IT Support</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-image feature-image-3">
+                    <span class="feature-text">IT Support</span>
+                    <p>Experienced in systems development</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-image feature-image-4">
+                    <span class="feature-text">Reality Development</span>
+                    <p>Proficient in app development</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-image feature-image-5">
+                    <span class="feature-text">Application Development</span>
+                    <p>Expertise in mobile development</p>
+                </div>
+            </div>
+            <div class="feature-item">
+                <div class="feature-image feature-image-6">
+                    <span class="feature-text">Mobile Development</span>
+                    <p>Skilled in Mobile and Website development</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+<!-- IT Support Section -->
+<section class="it-support-section">
+    <div class="container">
+        <h2>Expert IT Support for Seamless Operations</h2>
+        <p>We are DUOBIT TECHNOLOGIES PTY LTD, a company dedicated to facillitating industries in streamlining their systems and processes. We offer comprehensive IT support to ensure our clients are always covered in need.</p>
+        <a href="#contact-us-section" class="quote-button">GET FREE QUOTE AND CONSULT</a>
+    </div>
+</section>
+
+<!-- System Aid Section -->
+
+<section class="system-aid-section">
+    <div class="container">
+        <div class="card-left">
+            <div class="card-content">
+                <h2>Systems Aid</h2>
+                <p>Our expertise lies in systems development, application development, mobile development, and website development. We are committed to transforming your ideas into reality, ensuring your satisfaction and happiness.</p>
+                <div class="additional-info">
+                    <div class="info-item">
+                        <h1>30+</h1>
+                        <p>Website Support</p>
+                    </div>
+                    <div class="info-item">
+                        <h1>10+</h1>
+                        <p>Idea Conceptualization</p>
+                    </div>
+                    <div class="info-item">
+                        <h1>17</h1>
+                        <p>Client Assistance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-right">
+            <img src="assets/22.jpg" alt="System Aid Image">
+        </div>
+    </div>
+</section>
+
+<!-- IT Support Section -->
+<section id="it-support-section">
+<section class="it-support-section">
+    <div class="container">
+        <h1>IT Support</h1>
+        <div class="cards">
+            <div class="card">
+                <h2>Process Maintenance</h2>
+                <p>We are DUOBIT TECHNOLOGIES PTY LTD dedicated to simplifying system and process management for diverse industries.</p>
+                <hr>
+                <p class="industry-solutions">INDUSTRY SOLUTIONS</p>
+            </div>
+            <div class="card">
+                <h2>Systems Development</h2>
+                <p>Our expertise extends to providing comprehensive and reliable IT support, ensuring all our clients' needs are fully met.</p>
+                <hr>
+                <p class="industry-solutions">IT SUPPORT</p>
+            </div>
+            <div class="card">
+                <h2>Reality Development</h2>
+                <p>We specialize in systems, application, mobile, and website development, transforming your ideas into reality.</p>
+                <hr>
+                <p class="industry-solutions">APPLICATION AID</p>
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+<!-- Reality Development Section -->
+<section class="reality-development-section">
+    <div class="container">
+        <h1>Reality Development</h1>
+        <p class="description">Bringing innovative ideas to life through cutting-edge technology and creativity. Explore our projects that turn visions into reality.</p>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="assets/image1.jpg" alt="Image 1">
+            </div>
+            <div class="image-item">
+                <img src="assets/image2.jpg" alt="Image 2">
+            </div>
+            <div class="image-item">
+                <img src="assets/image3.jpg" alt="Image 3">
+            </div>
+            <div class="image-item">
+                <img src="assets/image4.jpg" alt="Image 4">
+            </div>
+            <div class="image-item">
+                <img src="assets/image5.jpg" alt="Image 5">
+            </div>
+            <div class="image-item">
+                <img src="assets/image6.jpg" alt="Image 6">
+            </div>
+            <div class="image-item">
+                <img src="assets/image7.jpg" alt="Image 7">
+            </div>
+            <div class="image-item">
+                <img src="assets/image8.jpg" alt="Image 8">
+            </div>
+            <div class="image-item">
+                <img src="assets/image9.jpg" alt="Image 9">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Application Aid Section -->
+<section class="application-aid-section">
+    <div class="container">
+        <h1>Application Aid</h1>
+        <p class="description">Providing comprehensive support and solutions for all your application needs. Explore how we assist our clients in various industries with cutting-edge technology.</p>
+        <div class="image-grid">
+            <div class="image-item">
+                <img src="assets/image4.jpg" alt="Client Assistance">
+                <h3>Client Assistance</h3>
+            </div>
+            <div class="image-item">
+                <img src="assets/image5.jpg" alt="Industry Solutions">
+                <h3>Industry Solutions</h3>
+            </div>
+            <div class="image-item">
+                <img src="assets/image9.jpg" alt="IT Support">
+                <h3>IT Support</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact-us-section">
+    <div class="contact-us-section">
+        <h1>Contact Us</h1>
+        <p>If you have any questions or need further information, please feel free to contact us. We're here to help you with any inquiries.</p>
+        
+        <form class="contact-form" id="contactForm" onsubmit="redirectToGmail(); return false;">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </div>
+</section>
+
+<script>
+function redirectToGmail() {
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value;
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=admin@duobit.co.za&su=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+
+    window.open(gmailUrl, '_blank');
+
+    // Clear the form fields
+    document.getElementById('contactForm').reset();
+
+    // Show a success alert
+    alert('Message successfully sent!');
+}
+</script>
+
+
+
+
+<!-- Google Maps Section -->
+<!-- Google Maps Section -->
+<section class="map-section">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3057.6574259867098!2d31.015168275139867!3d-29.909226525018525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef7a93b952eb5a3%3A0x6bf36f860f294829!2s29%20Pearce%20Rd%2C%20Grosvenor%2C%20Bluff%2C%204052!5e1!3m2!1sen!2sza!4v1724769704165!5m2!1sen!2sza" 
+        width="100%" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer-section">
+    <div class="footer-container">
+        <div class="footer-logo">
+            <img src="assets/logo.png" alt="Company Logo">
+        </div>
+        <div class="footer-content">
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about-us1">About Us</a></li>
+                    <li><a href="#about">Services</a></li>
+                    <li><a href="#contact-us-section">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:admin@duobit.co.za">admin@duobit.co.za</a></p>
+                <p>Phone: 062 953 3759 | 063 344 1351</p>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/duobit_technologies?igsh=MTZidGg3cDZqMTY3OA==" class="social-icon"><img src="assets/instagram-icon.png" alt="Instagram"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 DUOBIT TECHNOLOGIES PTY LTD. All rights reserved.</p>
+    </div>
+</footer>
+
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "ygiCGEdt2OZMmZ37f",
+      });
+   })();
+</script>
+
+
+
+    <script>
+        function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+}
+
+
+        function initMap() {
+    // The location of 29 Pearce Road, Bluff
+    const location = { lat: -29.9335, lng: 31.0139 };
+    
+    // The map, centered at the location
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 15,
+        center: location,
+        styles: [ /* You can add a custom map style here if desired */ ],
+    });
+    
+    // The marker, positioned at the location
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "29 Pearce Road, Bluff",
+        icon: {
+            url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
+        }
+    });
+
+
+    
+
+
+
+
+
+    
+}
+
+    </script>
+</body>
+</html>
